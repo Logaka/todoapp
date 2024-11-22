@@ -35,12 +35,12 @@ const TodoWrapper = () => {
 
     const editTodo = (id) => {
         setTodos(todos.map(todo => todo.id === id ?{
-            todo, isEditing: !todo.isEditing}: todo))
+            ...todo, isEditing: !todo.isEditing}: todo))
     }
 
     const editTask = (task,id) => {
         setTodos(todos.map(todo => todo.id === id ? {
-             ...task, isEditing: !todo.isEditing} : todo
+              task, isEditing: !todo.isEditing} : todo
         ))
     }
 
